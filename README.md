@@ -11,13 +11,13 @@ The bot includes:
 
 ## 🚀 Features
 
-✅ Message counting in Telegram group chats
-✅ Random target triggering & reset
-✅ Magic 8-Ball replies
-✅ Persistent stats per user & chat
-✅ Slash commands:
-- `/mystats` – View your personal stats
-- `/leaderboard` – View group leaderboard
+- ✅ Message counting in Telegram group chats  
+- ✅ Random target triggering & reset  
+- ✅ Magic 8-Ball replies  
+- ✅ Persistent stats per user & chat  
+- ✅ Slash commands:
+  - `/mystats` – view your stats
+  - `/leaderboard` – see top 8-ball triggers
 
 ---
 
