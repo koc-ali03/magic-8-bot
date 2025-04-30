@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request, Header, HTTPException
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
 from telegram import Update
-from .handlers import start, mystats, leaderboard, message_handler
+from .handlers import mystats, leaderboard, message_handler
 from .config import BOT_TOKEN, WEBHOOK_SECRET_TOKEN, BASE_URL
 from .db import init_db
 import logging
