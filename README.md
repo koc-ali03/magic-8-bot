@@ -29,6 +29,17 @@ Slash commands:
 
 ---
 
+## 📡 API Endpoints
+
+These can be used to query group-specific data:
+
+- `/api/group/<chat_id>/leaderboard` – Top users by trigger count
+- `/api/group/<chat_id>/stats` – Total messages and triggers in group
+
+Only works for groups where the bot is present.
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Python 3.10+**

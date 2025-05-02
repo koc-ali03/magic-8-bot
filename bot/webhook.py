@@ -4,11 +4,15 @@ from telegram import Update
 from .handlers import mystats, leaderboard, setrange, reset, disable, enable, eightball, message_handler
 from .config import BOT_TOKEN, WEBHOOK_SECRET_TOKEN, BASE_URL
 from .db import init_db
+from .api import api_router
 import logging
 
 logger = logging.getLogger(__name__)
 
 app = FastAPI()
+
+app.include_router(api_router)
+
 telegram_app = Application.builder().token(BOT_TOKEN).build()
 
 telegram_app.add_handler(CommandHandler("mystats", mystats))
