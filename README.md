@@ -22,7 +22,7 @@ The bot includes:
 Slash commands:
 - `/mystats` – View your stats in the chat
 - `/leaderboard` – Top 5 most frequent triggerers
-- `/ask <question>` – Ask the Magic 8-Ball directly 🎱
+- `/8ball` – Ask the Magic 8-Ball directly 🎱
 - `/setrange <min> <max>` – Admins set target range
 - `/reset` – Admins reset the counter & choose a new target
 - `/disable` / `/enable` – Admins toggle bot behavior per group  
