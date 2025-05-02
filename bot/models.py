@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Boolean
 from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
@@ -19,3 +19,11 @@ class ChatState(Base):
     chat_id = Column(Integer, primary_key=True)
     current_count = Column(Integer, default=0)
     target = Column(Integer)
+
+class ChatConfig(Base):
+    __tablename__ = 'chat_config'
+
+    chat_id = Column(Integer, primary_key=True)
+    min_target = Column(Integer, default=30)
+    max_target = Column(Integer, default=70)
+    enabled = Column(Boolean, default=True)

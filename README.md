@@ -11,13 +11,21 @@ The bot includes:
 
 ## 🚀 Features
 
-- ✅ Message counting in Telegram group chats  
-- ✅ Random target triggering & reset  
-- ✅ Magic 8-Ball replies  
-- ✅ Persistent stats per user & chat  
-- ✅ Slash commands:
-  - `/mystats` – view your stats
-  - `/leaderboard` – see top 8-ball triggers
+✅ Secret message counting in group chats  
+✅ Magic 8-Ball reply when count hits hidden target  
+✅ Fully persistent state with per-chat message tracking  
+✅ Multi-group support  
+✅ Admin-only command enforcement  
+✅ Webhook-safe on restarts (no spam from backlog)  
+✅ `.env` config with secret tokens and base URL (example file included)  
+
+Slash commands:
+- `/mystats` – View your stats in the chat
+- `/leaderboard` – Top 5 most frequent triggerers
+- `/ask <question>` – Ask the Magic 8-Ball directly 🎱
+- `/setrange <min> <max>` – Admins set target range
+- `/reset` – Admins reset the counter & choose a new target
+- `/disable` / `/enable` – Admins toggle bot behavior per group  
 
 ---
 

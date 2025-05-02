@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request, Header, HTTPException
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
 from telegram import Update
-from .handlers import mystats, leaderboard, message_handler
+from .handlers import mystats, leaderboard, setrange, reset, disable, enable, eightball, message_handler
 from .config import BOT_TOKEN, WEBHOOK_SECRET_TOKEN, BASE_URL
 from .db import init_db
 import logging
@@ -13,6 +13,11 @@ telegram_app = Application.builder().token(BOT_TOKEN).build()
 
 telegram_app.add_handler(CommandHandler("mystats", mystats))
 telegram_app.add_handler(CommandHandler("leaderboard", leaderboard))
+telegram_app.add_handler(CommandHandler("setrange", setrange))
+telegram_app.add_handler(CommandHandler("reset", reset))
+telegram_app.add_handler(CommandHandler("disable", disable))
+telegram_app.add_handler(CommandHandler("enable", enable))
+telegram_app.add_handler(CommandHandler("8ball", eightball))
 telegram_app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), message_handler))
 
 @app.on_event("startup")
